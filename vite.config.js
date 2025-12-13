@@ -14,14 +14,8 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
-    // Optimizaciones para producción
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    // Optimizaciones para producción (esbuild viene incluido con Vite)
+    minify: 'esbuild',
   },
   // Configuración del servidor de desarrollo
   server: {
