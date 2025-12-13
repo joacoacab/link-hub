@@ -1,0 +1,54 @@
+{
+  "tagline": "DevOps | Infraestructura | Automatización",
+  "links": [
+    {
+      "id": "whatsapp",
+      "title": "WhatsApp",
+      "url": "https://wa.me/549XXXXXXXXXX",
+      "icon": "💬",
+      "priority": "primary",
+      "description": "Contacto directo"
+    },
+    {
+      "id": "linkedin",
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/joaquin-cabrera",
+      "icon": "💼",
+      "priority": "secondary",
+      "description": "Perfil profesional"
+    },
+    {
+      "id": "instagram",
+      "title": "Instagram",
+      "url": "https://www.instagram.com/joaquin.cabrera",
+      "icon": "📷",
+      "priority": "secondary",
+      "description": "Contenido y actualizaciones"
+    },
+    {
+      "id": "website",
+      "title": "Sitio Profesional",
+      "url": "https://joaquin-cabrera.com",
+      "icon": "🌐",
+      "priority": "secondary",
+      "description": "CV vivo y portfolio"
+    },
+    {
+      "id": "cirac",
+      "title": "CIRAC Sistemas",
+      "url": "https://cirac.com.ar",
+      "icon": "🏢",
+      "priority": "secondary",
+      "description": "Consultora"
+    },
+    {
+      "id": "github",
+      "title": "GitHub",
+      "url": "https://github.com/joaquin-cabrera",
+      "icon": "💻",
+      "priority": "tertiary",
+      "description": "Repositorios y código"
+    }
+  ]
+}
+

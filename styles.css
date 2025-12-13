@@ -1,0 +1,327 @@
+/**
+ * misenlaces - Link Hub Personal
+ * Diseño minimalista y profesional para Joaquín Cabrera
+ * Mobile-first approach
+ */
+
+:root {
+    /* Paleta de colores - Violeta, Blanco y Dorado */
+    --color-bg: #1a0a2e;                    /* Violeta oscuro profundo */
+    --color-surface: #2d1b4e;               /* Violeta medio oscuro */
+    --color-surface-hover: #3d2b5e;         /* Violeta medio con hover */
+    --color-text-primary: #ffffff;          /* Blanco puro */
+    --color-text-secondary: #d4c5e8;        /* Lavanda claro */
+    --color-text-muted: #8b7ba8;            /* Violeta grisáceo */
+    --color-accent: #9333ea;                /* Violeta vibrante */
+    --color-accent-hover: #a855f7;          /* Violeta más claro */
+    --color-accent-gold: #fbbf24;           /* Amarillo dorado */
+    --color-accent-gold-hover: #fcd34d;     /* Dorado más claro */
+    --color-border: #4c1d95;                 /* Violeta oscuro para bordes */
+    --color-border-hover: #6d28d9;           /* Violeta medio para hover */
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    
+    /* Tipografía */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    
+    /* Bordes y sombras */
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow-sm: 0 1px 2px rgba(26, 10, 46, 0.5);
+    --shadow-md: 0 4px 6px rgba(26, 10, 46, 0.6);
+    --shadow-lg: 0 10px 20px rgba(26, 10, 46, 0.7);
+    
+    /* Transiciones */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 350ms ease;
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.avatar-container {
+    margin-bottom: var(--spacing-md);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-border);
+    transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.name {
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    font-weight: 400;
+}
+
+/* Links Container */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Link Cards */
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.15), transparent);
+    transition: left var(--transition-slow);
+}
+
+.link-card:hover::before {
+    left: 100%;
+}
+
+.link-card:hover {
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.link-card:active {
+    transform: translateY(0);
+}
+
+.link-card:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Prioridades de tarjetas */
+.link-card--primary {
+    background-color: var(--color-surface);
+    border-color: var(--color-accent-gold);
+    border-width: 2px;
+}
+
+.link-card--primary:hover {
+    background-color: rgba(251, 191, 36, 0.1);
+    border-color: var(--color-accent-gold-hover);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.link-card--secondary {
+    background-color: var(--color-surface);
+}
+
+.link-card--tertiary {
+    opacity: 0.9;
+}
+
+.link-card--tertiary:hover {
+    opacity: 1;
+}
+
+/* Contenido de tarjetas */
+.link-icon {
+    font-size: var(--font-size-2xl);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 40px;
+    text-align: center;
+}
+
+.link-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.link-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-primary);
+}
+
+.link-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.link-arrow {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-muted);
+    transition: transform var(--transition-base), color var(--transition-base);
+    flex-shrink: 0;
+}
+
+.link-card:hover .link-arrow {
+    transform: translateX(4px);
+    color: var(--color-accent);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* Error Message */
+.error-message {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--color-text-secondary);
+}
+
+.error-message p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive - Tablet y Desktop */
+@media (min-width: 768px) {
+    :root {
+        --font-size-3xl: 2.5rem;
+    }
+    
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .link-card {
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+    
+    .link-icon {
+        font-size: 2rem;
+        width: 48px;
+    }
+    
+    .link-title {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Accesibilidad - Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Fallback para avatar si no existe */
+.avatar[src=""],
+.avatar:not([src]),
+.avatar[src*="undefined"],
+.avatar[src*="null"] {
+    display: none;
+}
+
+/* Placeholder visual si no hay avatar (se muestra si el img tiene display:none) */
+.avatar-container::before {
+    content: '👤';
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    border: 3px solid var(--color-border);
+    font-size: 3rem;
+    margin: 0 auto;
+    line-height: 100px;
+    text-align: center;
+}
+
+/* Mostrar placeholder cuando el avatar está oculto */
+.avatar-container:has(.avatar[style*="display: none"])::before {
+    display: block;
+}
+

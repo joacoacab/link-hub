@@ -1,0 +1,26 @@
+{
+  "name": "misenlaces",
+  "version": "1.0.0",
+  "description": "Link hub personal para Joaquín Cabrera",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/misenlaces.git"
+  },
+  "keywords": [
+    "link-hub",
+    "github-pages",
+    "personal-branding"
+  ],
+  "author": "Joaquín Cabrera",
+  "license": "MIT"
+}
+
