@@ -14,17 +14,25 @@ async function loadLinks() {
         
         // Actualizar tagline si existe
         const taglineElement = document.getElementById('tagline');
-        if (taglineElement && data.tagline) {
-            taglineElement.textContent = data.tagline;
+        if (taglineElement) {
+            if (data.tagline && data.tagline.trim() !== '') {
+                taglineElement.textContent = data.tagline;
+                taglineElement.style.display = 'block';
+            } else {
+                taglineElement.style.display = 'none';
+            }
         }
         
         // Renderizar enlaces
         const linksContainer = document.getElementById('linksContainer');
         if (!linksContainer) return;
         
-        // Ordenar enlaces por prioridad
+        // Ordenar enlaces por layout (row-1, row-2, row-3) y luego por prioridad
+        const layoutOrder = { 'row-1': 1, 'row-2': 2, 'row-3': 3 };
         const priorityOrder = { primary: 1, secondary: 2, tertiary: 3 };
         const sortedLinks = data.links.sort((a, b) => {
+            const layoutDiff = (layoutOrder[a.layout] || 99) - (layoutOrder[b.layout] || 99);
+            if (layoutDiff !== 0) return layoutDiff;
             return (priorityOrder[a.priority] || 99) - (priorityOrder[b.priority] || 99);
         });
         
@@ -47,6 +55,11 @@ function createLinkCard(link) {
     card.rel = 'noopener noreferrer';
     card.className = `link-card link-card--${link.priority}`;
     card.setAttribute('aria-label', `${link.title}: ${link.description}`);
+    
+    // Agregar atributo data-layout para el CSS grid
+    if (link.layout) {
+        card.setAttribute('data-layout', link.layout);
+    }
     
     card.innerHTML = `
         <span class="link-icon" aria-hidden="true">${link.icon}</span>
@@ -78,4 +91,5 @@ if (document.readyState === 'loading') {
 } else {
     loadLinks();
 }
+
 

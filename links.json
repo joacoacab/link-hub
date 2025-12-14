@@ -1,29 +1,32 @@
 {
-  "tagline": "DevOps | Infraestructura | Automatización",
+  "tagline": "",
   "links": [
     {
-      "id": "whatsapp",
-      "title": "WhatsApp",
-      "url": "https://wa.me/549XXXXXXXXXX",
-      "icon": "💬",
-      "priority": "primary",
-      "description": "Contacto directo"
-    },
-    {
-      "id": "linkedin",
-      "title": "LinkedIn",
-      "url": "https://www.linkedin.com/in/joaquin-cabrera",
-      "icon": "💼",
-      "priority": "secondary",
-      "description": "Perfil profesional"
-    },
-    {
-      "id": "instagram",
+      "id": "instagram-1",
       "title": "Instagram",
-      "url": "https://www.instagram.com/joaquin.cabrera",
+      "url": "https://www.instagram.com/joaco.a.cab/",
       "icon": "📷",
-      "priority": "secondary",
-      "description": "Contenido y actualizaciones"
+      "priority": "primary",
+      "description": "Perfil principal",
+      "layout": "row-1"
+    },
+    {
+      "id": "instagram-2",
+      "title": "Instagram",
+      "url": "https://www.instagram.com/joaco.lab/",
+      "icon": "📷",
+      "priority": "primary",
+      "description": "Laboratorio",
+      "layout": "row-1"
+    },
+    {
+      "id": "instagram-3",
+      "title": "Instagram",
+      "url": "https://siracsistemas.com.ar/",
+      "icon": "📷",
+      "priority": "primary",
+      "description": "SIRAC",
+      "layout": "row-1"
     },
     {
       "id": "website",
@@ -31,24 +34,28 @@
       "url": "https://joaquin-cabrera.com",
       "icon": "🌐",
       "priority": "secondary",
-      "description": "CV vivo y portfolio"
+      "description": "CV vivo y portfolio",
+      "layout": "row-2"
     },
     {
-      "id": "cirac",
-      "title": "CIRAC Sistemas",
-      "url": "https://cirac.com.ar",
+      "id": "linkedin",
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/joaquin-ariel-cabrera/",
+      "icon": "💼",
+      "priority": "secondary",
+      "description": "Perfil profesional",
+      "layout": "row-2"
+    },
+    {
+      "id": "sirac",
+      "title": "SIRAC Sistemas",
+      "url": "https://siracsistemas.com.ar/",
       "icon": "🏢",
       "priority": "secondary",
-      "description": "Consultora"
-    },
-    {
-      "id": "github",
-      "title": "GitHub",
-      "url": "https://github.com/joaquin-cabrera",
-      "icon": "💻",
-      "priority": "tertiary",
-      "description": "Repositorios y código"
+      "description": "Consultora",
+      "layout": "row-3"
     }
   ]
 }
+
 
