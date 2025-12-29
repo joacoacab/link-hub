@@ -4,8 +4,10 @@
  */
 
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  plugins: [react()],
   // IMPORTANTE: Cambiar según tu configuración
   // - Con dominio personalizado (misenlaces.joaquin-cabrera.com): base: '/'
   // - Sin dominio (usuario.github.io/misenlaces): base: '/misenlaces/'
@@ -14,10 +16,8 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
-    // Optimizaciones para producción (esbuild viene incluido con Vite)
     minify: 'esbuild',
   },
-  // Configuración del servidor de desarrollo
   server: {
     port: 3000,
     open: true,

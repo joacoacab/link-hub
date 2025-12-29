@@ -1,0 +1,101 @@
+{
+  "main": {
+    "id": "main",
+    "name": "Joaquín Cabrera",
+    "handle": "@joaco.a.cab",
+    "bio": "Profesional en Transformación Digital, DevOps e Infraestructura",
+    "avatarUrl": "/assets/avatar.jpg",
+    "theme": {
+      "accent": "#9333ea"
+    },
+    "links": [
+      {
+        "title": "Instagram Personal",
+        "subtitle": "Perfil principal",
+        "url": "https://www.instagram.com/joaco.a.cab/",
+        "icon": "Instagram",
+        "highlight": true,
+        "section": "personal",
+        "category": "personal"
+      },
+      {
+        "title": "Instagram Lab",
+        "subtitle": "Laboratorio creativo",
+        "url": "https://www.instagram.com/joaco.lab/",
+        "icon": "Instagram",
+        "highlight": false,
+        "section": "personal",
+        "category": "personal"
+      },
+      {
+        "title": "Sitio Profesional",
+        "subtitle": "CV vivo y portfolio",
+        "url": "https://joaquin-cabrera.com",
+        "icon": "Globe",
+        "highlight": true,
+        "section": "personal",
+        "category": "personal"
+      },
+      {
+        "title": "LinkedIn",
+        "subtitle": "Perfil profesional",
+        "url": "https://www.linkedin.com/in/joaquin-ariel-cabrera/",
+        "icon": "Linkedin",
+        "highlight": false,
+        "section": "personal",
+        "category": "personal"
+      },
+      {
+        "title": "SIRAC Sistemas",
+        "subtitle": "Consultora - Sitio web",
+        "url": "https://siracsistemas.com.ar/",
+        "icon": "Globe",
+        "highlight": true,
+        "section": "profesional",
+        "category": "pro"
+      },
+      {
+        "title": "Instagram SIRAC",
+        "subtitle": "Síguenos en redes",
+        "url": "https://www.instagram.com/siracsistemas/",
+        "icon": "Instagram",
+        "highlight": false,
+        "section": "profesional",
+        "category": "pro"
+      },
+      {
+        "title": "LinkedIn SIRAC",
+        "subtitle": "Conecta con nosotros",
+        "url": "https://www.linkedin.com/company/sirac-sistemas",
+        "icon": "Linkedin",
+        "highlight": false,
+        "section": "profesional",
+        "category": "pro"
+      },
+      {
+        "title": "Contacto SIRAC",
+        "subtitle": "Escríbenos",
+        "url": "mailto:contacto@siracsistemas.com.ar",
+        "icon": "Mail",
+        "highlight": false,
+        "section": "profesional",
+        "category": "pro"
+      }
+    ],
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/joaco.a.cab/"
+      },
+      {
+        "platform": "Linkedin",
+        "url": "https://www.linkedin.com/in/joaquin-ariel-cabrera/"
+      }
+    ],
+    "seo": {
+      "title": "Joaquín Cabrera | Link Hub",
+      "description": "Enlaces de Joaquín Cabrera - Profesional en Transformación Digital, DevOps e Infraestructura",
+      "ogImage": "/assets/og-personal.jpg"
+    }
+  }
+}
